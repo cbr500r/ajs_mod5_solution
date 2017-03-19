@@ -1,0 +1,53 @@
+<div class="text-center">
+	<h3>Tell us your favorite dish and receive our newsletter!</h3>
+	<form name="signupForm" novalidate="novalidate">
+	<ul>
+	<li>
+	<label for="firstName">First Name: </label>
+	<input type="text" name="firstName" placeholder="First Name"
+	  ng-model="signup.user.firstName"
+	  minlength="2" 
+	  required="required"
+	  ><br>
+	  <span ng-if="signupForm.firstName.$touched && signupForm.firstName.$invalid">You MUST enter a first NAME!</span></li>
+	  <li>
+	<label for="lastName">Last Name: </label>
+	  <input type="text" name="lastName" placeholder="Last Name"
+	  ng-model="signup.user.lastName"
+	  minlength="2" 
+	  required="required"><br>
+	  <span ng-if="signupForm.lastName.$touched && signupForm.lastName.$invalid">You MUST enter a last NAME TOO!</span></li>
+      <li>
+      	<label for="email">Email Addr: </label> 
+      	<input type="email" name="email" placeholder="Email"
+          ng-model="signup.user.email"
+          required><br>
+          <span ng-if="signupForm.email.$invalid && signupForm.email.$touched">
+            Must be a valid email address: handle@domain format
+          </span>
+      </li>
+      <li>
+      	<label for="phone">Phone Num: </label>
+        <input type="text" name="phone" placeholder="Phone ###-###-####"
+          ng-model="signup.user.phone"
+          pattern="(\d{3})-(\d{3})-(\d{4})"><br>
+          <span ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+          </span></li>
+      <li>
+      	<input type="text" name="favorite" placeholder="Favorite Item"
+      	ng-model="signup.user.favorite"
+      	ng-blur="signup.checkFavorite()"><br>
+        <span ng-if="signup.user.favoriteItem.short_name">You like:	{{ signup.user.favoriteItem.name }}!</span>
+        <span ng-if="signup.invalidItem">Sorry, we don't have that item...</span>
+      </li>
+	  <li>
+        <button
+          ng-disabled="signupForm.$invalid"
+          ng-click="signup.submit()">Submit</button>
+         <br>
+        <span ng-if="signup.registered">Your information has been saved!</span>
+      </li>
+	</ul>
+	</form>
+</div>

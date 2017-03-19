@@ -1,0 +1,10 @@
+<div class="text-center">
+	<div ng-if="myinfo.user">
+	<h3>Your registration information:</h3>
+	<div>{{ myinfo.user.firstName }} {{ myinfo.user.lastName }}</div>
+	<div>{{ myinfo.user.email }}</div>
+	<div>{{ myinfo.user.phone }}</div>
+	<div>{{ myinfo.user.favoriteItem.name }}</div>
+	</div>
+	<span ng-if="!myinfo.user">You're not registered yet, <a ui-sref="public.signup">Sign up now!</a></span>
+</div>
