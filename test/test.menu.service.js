@@ -17,7 +17,7 @@ describe('menuitems', function () {
     });
   });
 
-  it('should return Sesame Beef then no item error', function() {
+  it('should return Sesame Beef', function() {
     $httpBackend.whenGET('https://cbr500r.herokuapp.com/menu_items/SP8.json')
       .respond(item);
     // good response, item is there
