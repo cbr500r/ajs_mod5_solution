@@ -7,3 +7,5 @@ Enroll in the [complete free course on AngularJS][aeac87f1]
 
   [Single Page Web Applications with AngularJS][39804538]
   [39804538]: https://www.coursera.org/learn/single-page-web-apps-with-angularjs "Enroll in the course on AngluarJS"
+
+Unit test for MenuService item retrieval is @ https://cbr500r.github.io/ajs_mod5_solution/test-index.html
