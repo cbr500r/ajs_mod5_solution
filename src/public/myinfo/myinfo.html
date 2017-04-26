@@ -6,7 +6,7 @@
 	<div>{{ myinfo.user.phone }}</div>
 	<div>{{ myinfo.user.favoriteItem.name }}</div>
 	<div ng-if="myinfo.user.favoriteItem.image_present">
-		<img ng-src="https://cbr500r.herokuapp.com/images/{{ myinfo.user.favoriteItem.shortname }}.jpg" alt="{{ myinfo.user.favoriteItem.name }}">
+		<img ng-src="https://cbr500r.herokuapp.com/images/{{ myinfo.user.favoriteItem.short_name }}.jpg" alt="{{ myinfo.user.favoriteItem.short_name }}">
 	</div>
 	<div>{{ myinfo.user.favoriteItem.description }}</div>
 	</div>
